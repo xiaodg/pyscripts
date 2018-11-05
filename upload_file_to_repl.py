@@ -1,4 +1,6 @@
 #coding:utf-8
+#涓婁紶鏂囦欢鑷砲ttp://dj--xiaodg.repl.co/files
+#鏂逛究涓嶅悓缁堢浼犻�佹枃浠讹紝涓嶄細闀挎湡淇濆瓨
 
 import os
 import sys
@@ -12,4 +14,4 @@ if len(sys.argv)>1:
 			files = {'file': open(file,'rb')}
 			r = requests.post(url, files=files)
 		else:
-			print("指定路径%s不存在或者为目录" % file)
+			print("鎸囧畾璺緞%s涓嶅瓨鍦ㄦ垨鑰呬负鐩綍" % file)
