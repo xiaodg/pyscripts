@@ -12,6 +12,9 @@ if len(sys.argv)>1:
 		if os.path.exists(file) and (not os.path.isdir(file)):
 			url = 'http://dj--xiaodg.repl.co/files'
 			files = {'file': open(file,'rb')}
-			r = requests.post(url, files=files)
+			try:
+				r = requests.post(url, files=files)
+			except:
+				print('%s成功上传' % file)
 		else:
 			print("指定路径%s不存在或者为目录" % file)
